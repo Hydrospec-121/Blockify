@@ -1,0 +1,22 @@
+.filter-sidebar {
+  display: none;
+}
+@media (min-width: 960px) {
+  .filter-sidebar {
+    display: block;
+    width: 240px;
+    flex-shrink: 0;
+    padding-right: var(--space-6);
+    border-right: var(--border-width-sm) solid var(--color-line);
+  }
+}
+.filter-sidebar__header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+.filter-sidebar__clear {
+  background: none; border: none;
+  font-size: var(--text-xs); font-weight: var(--weight-semibold);
+  color: var(--color-verify);
+  text-decoration: underline;
+}

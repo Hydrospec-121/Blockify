@@ -1,0 +1,10 @@
+.error-state {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: var(--space-3);
+  padding: var(--space-16) var(--space-4);
+  border: 1.5px solid var(--color-error-tint);
+  background: var(--color-error-tint);
+}
+.error-state__title { font-size: var(--text-lg); color: var(--color-error); }
+.error-state__desc { color: var(--color-ink-soft); max-width: 40ch; }
+.error-state__action { margin-top: var(--space-2); background: var(--color-paper); }

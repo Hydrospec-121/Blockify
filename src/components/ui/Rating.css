@@ -1,0 +1,7 @@
+.rating { display: inline-flex; align-items: center; gap: var(--space-1); }
+.rating__stars { display: inline-flex; }
+.rating__star { color: var(--color-line-strong); font-size: var(--text-sm); }
+.rating__star[data-state="full"] { color: var(--color-signal); }
+.rating__star[data-state="half"] { color: var(--color-signal); opacity: 0.5; }
+.rating__count { font-size: var(--text-xs); color: var(--color-ink-faint); }
+.rating--sm .rating__star { font-size: var(--text-xs); }

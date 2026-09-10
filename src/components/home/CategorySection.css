@@ -1,0 +1,33 @@
+/* Mobile: horizontal snap-scroll row */
+.category-scroll {
+  display: flex;
+  gap: var(--space-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--space-2);
+  margin: 0 calc(var(--gutter-mobile) * -1);
+  padding-inline: var(--gutter-mobile);
+}
+.category-scroll::-webkit-scrollbar { display: none; }
+.category-scroll__item {
+  flex: 0 0 auto;
+  width: 42vw;
+  max-width: 200px;
+  scroll-snap-align: start;
+}
+.category-bento { display: none; }
+
+/* Desktop: asymmetric bento — one large feature, a tighter grid beside it */
+@media (min-width: 960px) {
+  .category-scroll { display: none; }
+  .category-bento {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-6);
+  }
+  .category-bento__rest {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}

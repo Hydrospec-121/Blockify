@@ -1,0 +1,97 @@
+@import "./tokens.css";
+@import "./grid.css";
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+html { overflow-x: hidden; } /* guards against any stray full-bleed element on narrow Android widths */
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, svg { display: block; max-width: 100%; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, h4, p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+
+/* ---------- Focus visibility (accessibility floor) ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-verify);
+  outline-offset: 2px;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Typography helpers ----------
+   Prefer these over raw font-size declarations so hierarchy stays
+   consistent across every page and component. */
+.font-display { font: var(--type-display); letter-spacing: var(--letter-tight); }
+.text-h1 { font: var(--type-h1); letter-spacing: var(--letter-tight); }
+.text-h2 { font: var(--type-h2); letter-spacing: var(--letter-tight); }
+.text-h3 { font: var(--type-h3); }
+.text-h4 { font: var(--type-h4); }
+.text-body-lg { font: var(--type-body-lg); }
+.text-body { font: var(--type-body); }
+.text-body-sm { font: var(--type-body-sm); }
+.text-caption { font: var(--type-caption); color: var(--color-ink-faint); }
+.text-label { font: var(--type-label); text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-ink-soft); }
+
+/* ---------- Layout primitives ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding-inline: var(--gutter-mobile);
+}
+@media (min-width: 960px) {
+  .container { padding-inline: var(--gutter-desktop); }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.reading-width { max-width: var(--reading-max-width); }
+
+/* Shared vertical rhythm for homepage sections (Hero, Category,
+   Featured, Promo, New Arrivals, Value, Trust, Final CTA all use this
+   so spacing stays consistent without each section redefining it). */
+.home-section { padding-block: var(--space-10); }
+@media (min-width: 960px) {
+  .home-section { padding-block: var(--space-16); }
+}
+
+/* ---------- App shell spacing ----------
+   Mobile gets a fixed header + bottom nav; content needs matching
+   padding so it never sits under either bar. Bottom padding accounts
+   for the iOS/Android gesture safe area via --bottom-nav-safe-height. */
+.app-main {
+  padding-top: var(--header-height-mobile);
+  padding-bottom: calc(var(--bottom-nav-safe-height) + var(--space-4));
+  min-height: 100%;
+}
+@media (min-width: 960px) {
+  .app-main {
+    padding-top: var(--header-height-desktop);
+    padding-bottom: 0;
+  }
+}

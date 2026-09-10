@@ -1,0 +1,12 @@
+.final-cta { background: var(--color-ink); color: var(--color-paper); }
+.final-cta__inner {
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-3);
+  padding-block: var(--space-10);
+}
+.final-cta__title { font: var(--type-h2); font-family: var(--font-display); }
+.final-cta__desc { color: rgba(250, 250, 247, 0.7); max-width: var(--reading-max-width); }
+
+@media (min-width: 960px) {
+  .final-cta__inner { padding-block: var(--space-16); gap: var(--space-4); }
+  .final-cta__title { font: var(--type-display); font-size: clamp(2rem, 1.5rem + 2vw, 3rem); }
+}

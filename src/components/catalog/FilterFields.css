@@ -1,0 +1,20 @@
+.filter-fields { display: flex; flex-direction: column; gap: var(--space-6); }
+.filter-fields__group { border: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.filter-fields__group legend { padding: 0; margin-bottom: var(--space-1); }
+
+.filter-fields__checkbox {
+  display: flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+  padding-block: var(--space-1);
+  cursor: pointer;
+  min-height: 32px;
+}
+.filter-fields__checkbox input { width: 18px; height: 18px; accent-color: var(--color-signal); flex-shrink: 0; }
+.filter-fields__checkbox:hover { color: var(--color-ink); }
+.filter-fields__count { margin-left: auto; color: var(--color-ink-faint); font-size: var(--text-xs); }
+.filter-fields__tag-label { text-transform: capitalize; }
+
+.filter-fields__price-row { display: flex; align-items: center; gap: var(--space-2); }
+.filter-fields__price-row .field { flex: 1; }
+.filter-fields__price-sep { color: var(--color-ink-faint); }

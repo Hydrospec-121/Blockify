@@ -1,0 +1,45 @@
+/*
+  BLOCKIFY grid utilities
+  -----------------------
+  Reusable product/category grid classes. Column count is driven by
+  image legibility, not viewport alone: mobile stays at 2 columns
+  everywhere (compact cards read fine at that width), tablet allows a
+  3rd, desktop settles at 4, and wide desktop only goes to 5 when the
+  section explicitly opts in via .grid-wide.
+*/
+
+.product-grid,
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 600px) {
+  .grid-3-tablet { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 960px) {
+  .product-grid,
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+  .grid-3-tablet { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1440px) {
+  .product-grid.grid-wide,
+  .grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+@media (min-width: 960px) {
+  .category-grid { grid-template-columns: repeat(5, 1fr); gap: var(--space-6); }
+}

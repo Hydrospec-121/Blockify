@@ -1,0 +1,13 @@
+.select {
+  height: var(--input-height-mobile);
+  border: var(--border-width-md) solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-paper);
+  padding-inline: var(--space-3);
+  font-size: var(--text-base);
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+@media (min-width: 960px) { .select { height: var(--input-height-desktop); } }
+.select:hover:not(:disabled):not(:focus) { border-color: var(--color-ink-faint); }
+.select:focus { border-color: var(--color-verify); box-shadow: var(--shadow-focus); outline: none; }
+.select:disabled { background: var(--color-board); color: var(--color-ink-faint); cursor: not-allowed; }

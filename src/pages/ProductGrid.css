@@ -1,0 +1,3 @@
+/* .product-grid itself now lives in styles/grid.css (shared utility) */
+.product-grid-page { padding-block: var(--space-8); }
+.product-grid-page__title { font: var(--type-h1); margin-block: var(--space-4); }

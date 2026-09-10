@@ -1,0 +1,6 @@
+.breadcrumbs ol { display: flex; flex-wrap: wrap; align-items: center; }
+.breadcrumbs li { display: inline-flex; align-items: center; font-size: var(--text-xs); }
+.breadcrumbs a { color: var(--color-ink-soft); }
+.breadcrumbs a:hover { color: var(--color-ink); }
+.breadcrumbs span[aria-current="page"] { color: var(--color-ink); font-weight: var(--weight-medium); }
+.breadcrumbs__sep { margin-inline: var(--space-2); color: var(--color-ink-faint); }

@@ -1,0 +1,18 @@
+.new-arrivals-rail {
+  display: flex;
+  gap: var(--space-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--space-2);
+}
+.new-arrivals-rail::-webkit-scrollbar { display: none; }
+.new-arrivals-rail__item {
+  flex: 0 0 auto;
+  width: 46vw;
+  max-width: 220px;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 960px) {
+  .new-arrivals-rail__item { width: 260px; }
+}

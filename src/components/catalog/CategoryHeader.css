@@ -1,0 +1,14 @@
+.category-header { margin-top: var(--space-3); margin-bottom: var(--space-5); }
+.category-header__visual {
+  aspect-ratio: 21 / 9;
+  max-height: 160px;
+  background: var(--color-board);
+  overflow: hidden;
+  margin-bottom: var(--space-4);
+}
+.category-header__image { width: 100%; height: 100%; object-fit: cover; }
+.category-header__desc { color: var(--color-ink-soft); margin-top: var(--space-1); max-width: var(--reading-max-width); }
+
+@media (min-width: 960px) {
+  .category-header__visual { max-height: 260px; }
+}

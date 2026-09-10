@@ -1,0 +1,15 @@
+.service-strip { border-bottom: var(--border-width-sm) solid var(--color-line); }
+.service-strip__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4) var(--space-8);
+  padding-block: var(--space-5);
+}
+.service-strip__item {
+  display: flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink-soft);
+}
+.service-strip__item span:first-child { font-size: var(--text-md); color: var(--color-signal); }

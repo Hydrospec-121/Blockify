@@ -1,0 +1,22 @@
+.catalog-toolbar { display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-4); }
+
+.catalog-toolbar__mobile-row { display: flex; align-items: flex-end; gap: var(--space-3); }
+.catalog-toolbar__filter-btn { flex-shrink: 0; }
+.catalog-toolbar__mobile-sort { flex: 1; }
+/* Keep the "Sort by" label in the accessibility tree; just hide it
+   visually so the compact mobile toolbar doesn't wrap two lines. */
+.catalog-toolbar__mobile-sort .field__label {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.catalog-toolbar__row { display: flex; align-items: center; justify-content: space-between; }
+.catalog-toolbar__desktop-sort { display: none; width: 220px; }
+
+@media (min-width: 960px) {
+  .catalog-toolbar__mobile-row { display: none; }
+  .catalog-toolbar__desktop-sort { display: block; }
+}

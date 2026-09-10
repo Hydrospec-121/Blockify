@@ -1,0 +1,20 @@
+/* Shared layout rules for Shop / Category / Search — the three pages
+   that all present a filterable, sortable product catalog. Keeping
+   this in one file means the sidebar/grid split stays pixel-identical
+   across all three instead of drifting via copy-pasted CSS. */
+
+.catalog-page { padding-block: var(--space-6) var(--space-10); }
+.catalog-page__title { margin-top: var(--space-3); }
+.catalog-page__desc { color: var(--color-ink-soft); margin-top: var(--space-1); margin-bottom: var(--space-5); max-width: var(--reading-max-width); }
+
+.catalog-page__layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.catalog-page__main { flex: 1; min-width: 0; }
+
+@media (min-width: 960px) {
+  .catalog-page { padding-block: var(--space-8) var(--space-16); }
+  .catalog-page__layout { flex-direction: row; align-items: flex-start; }
+}

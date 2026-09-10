@@ -1,0 +1,5 @@
+.order-detail__header { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-3); }
+.order-detail__date { color: var(--color-ink-faint); font-size: var(--text-sm); margin-top: var(--space-1); }
+.order-detail__items { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-5); font-size: var(--text-sm); }
+.order-detail__items li { display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-line); padding-bottom: var(--space-2); }
+.order-detail__total { display: flex; justify-content: space-between; margin-top: var(--space-4); font-size: var(--text-md); }

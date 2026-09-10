@@ -1,0 +1,4 @@
+/* Intentionally no overrides — this section relies entirely on the
+   shared .product-grid utility so its rhythm matches Shop/Category
+   pages exactly. Kept as its own file for parity with other home/
+   section components and any future section-specific tweaks. */

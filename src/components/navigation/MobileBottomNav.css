@@ -1,0 +1,42 @@
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  height: var(--bottom-nav-safe-height);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--color-paper);
+  border-top: var(--border-width-md) solid var(--color-ink);
+  display: flex;
+  z-index: var(--z-header);
+}
+@media (min-width: 960px) { .bottom-nav { display: none; } }
+.bottom-nav__item {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px;
+  color: var(--color-ink-faint);
+  min-height: 48px; /* meets touch-target minimum */
+  height: var(--bottom-nav-height);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+.bottom-nav__item.active {
+  color: var(--color-ink);
+  position: relative;
+}
+/* Small top tick on the active tab — a clear indicator without an
+   oversized pill/background fill. */
+.bottom-nav__item.active::before {
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  width: 20px; height: 2px;
+  transform: translateX(-50%);
+  background: var(--color-signal);
+}
+.bottom-nav__icon { position: relative; font-size: var(--text-md); line-height: 1; }
+.bottom-nav__label { font-size: 10px; font-weight: var(--weight-medium); }
+.bottom-nav__badge {
+  position: absolute; top: -6px; right: -8px;
+  min-width: 14px; height: 14px; padding-inline: 3px;
+  background: var(--color-signal); color: #fff;
+  border-radius: var(--radius-pill);
+  font-size: 9px; font-weight: var(--weight-bold);
+  display: flex; align-items: center; justify-content: center;
+}

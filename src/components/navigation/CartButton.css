@@ -1,0 +1,15 @@
+.cart-button {
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px;
+  background: none; border: none;
+  font-size: var(--text-lg);
+}
+.cart-button__count {
+  position: absolute; top: 2px; right: 2px;
+  min-width: 16px; height: 16px; padding-inline: 3px;
+  background: var(--color-signal); color: #fff;
+  border-radius: var(--radius-pill);
+  font-size: 10px; font-weight: var(--weight-bold);
+  display: flex; align-items: center; justify-content: center;
+}

@@ -1,0 +1,44 @@
+.drawer__overlay {
+  position: fixed; inset: 0;
+  background: rgba(22, 23, 27, 0.5);
+  z-index: var(--z-drawer);
+  animation: overlay-fade var(--duration-base) var(--ease-standard);
+}
+.drawer__panel {
+  position: fixed; top: 0; bottom: 0;
+  width: min(400px, 100vw);
+  background: var(--color-paper);
+  display: flex; flex-direction: column;
+  animation-duration: var(--duration-slow);
+  animation-timing-function: var(--ease-standard);
+}
+.drawer__panel--right { right: 0; border-left: var(--border-width-md) solid var(--color-ink); animation-name: drawer-in-right; }
+.drawer__panel--left { left: 0; border-right: var(--border-width-md) solid var(--color-ink); animation-name: drawer-in-left; }
+
+@keyframes drawer-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes drawer-in-left {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@keyframes overlay-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .drawer__overlay, .drawer__panel { animation: none; }
+}
+
+.drawer__header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-width-sm) solid var(--color-line);
+}
+.drawer__close { background: none; border: none; font-size: var(--text-md); width: 32px; height: 32px; border-radius: var(--radius-sm); }
+.drawer__close:hover { background: var(--color-board); }
+.drawer__body { flex: 1; overflow-y: auto; padding: var(--space-5); }
+.drawer__footer { border-top: var(--border-width-sm) solid var(--color-line); padding: var(--space-4) var(--space-5); }
+
+/* Comfortable full-bleed on the narrowest Android widths (360-390px) */
+@media (max-width: 400px) {
+  .drawer__panel { width: 100vw; border: none; }
+}

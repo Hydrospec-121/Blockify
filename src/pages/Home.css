@@ -1,0 +1,20 @@
+.hero {
+  background: var(--color-board);
+  border-bottom: var(--border-width-md) solid var(--color-ink);
+  padding-block: var(--space-16);
+}
+.hero__inner { max-width: var(--reading-max-width); }
+.hero__title { font: var(--type-h1); letter-spacing: var(--letter-tight); }
+.hero__subtitle { margin-block: var(--space-4); color: var(--color-ink-soft); font: var(--type-body-lg); }
+
+.home-section { padding-block: var(--space-10); }
+
+/* .home-categories -> category-grid and .home-products -> product-grid
+   utilities now live in styles/grid.css */
+
+@media (min-width: 960px) {
+  .hero { padding-block: var(--space-24); }
+  .hero__title { font: var(--type-display); }
+  .hero__subtitle { font: var(--type-body-lg); }
+  .home-section { padding-block: var(--space-16); }
+}

@@ -1,0 +1,25 @@
+.promo { background: var(--color-paper); }
+.promo__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-block: var(--space-8);
+}
+.promo__visual { aspect-ratio: 16 / 10; background: var(--color-board); overflow: hidden; border: var(--border-width-sm) solid var(--color-line); }
+.promo__image { width: 100%; height: 100%; object-fit: cover; }
+.promo__content { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+.promo__eyebrow { align-self: flex-start; }
+.promo__title { font: var(--type-h2); font-family: var(--font-display); letter-spacing: var(--letter-tight); max-width: 24ch; }
+.promo__desc { color: var(--color-ink-soft); max-width: var(--reading-max-width); }
+
+@media (min-width: 960px) {
+  .promo__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-16);
+    padding-block: var(--space-16);
+  }
+  .promo__visual { flex: 1.1; aspect-ratio: 4 / 3; }
+  .promo__content { flex: 1; gap: var(--space-3); }
+  .promo__title { font: var(--type-display); font-size: clamp(2rem, 1.5rem + 2vw, 3rem); }
+}

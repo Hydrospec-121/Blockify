@@ -1,0 +1,18 @@
+.mobile-buy-bar {
+  position: fixed;
+  left: 0; right: 0;
+  bottom: var(--bottom-nav-safe-height);
+  z-index: var(--z-header);
+  background: var(--color-paper);
+  border-top: var(--border-width-md) solid var(--color-ink);
+  padding: var(--space-3) var(--gutter-mobile);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.mobile-buy-bar__cta { flex: 1; max-width: 200px; }
+
+@media (min-width: 960px) {
+  .mobile-buy-bar { display: none; }
+}
